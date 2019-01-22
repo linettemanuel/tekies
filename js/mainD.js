@@ -1,7 +1,6 @@
 var firstNum = document.querySelector('.integrity');
 var secondNum = document.querySelector('.multi-device');
 var thirdNum = document.querySelector('.process');
-var circles = document.querySelectorAll('.app_round_image');
 var menu = document.querySelectorAll(".nav");
 var sectionNames = document.querySelectorAll(".section");
 var body = document.getElementsByTagName("body");
@@ -10,28 +9,25 @@ var copy = document.querySelectorAll(".copy");
 var copyIcon = document.querySelectorAll(".fa-copy");
 var copyConfirm = document.querySelectorAll(".tooltiptext-confirm");
 var menuOnOffButton = document.querySelector(".material-icons");
-var mobileMenu = document.querySelector(".nav-mobile");
 var mobileMenuArea = document.querySelector(".nav-area-mobile");
-var mobileMenuTags = mobileMenu.querySelectorAll(".nav-item");
 var __valueSection = document.querySelector("#values");
 var menuSections =  document.querySelectorAll(".menu-section")
 var counter = 0;
+var groups = document.querySelectorAll(".join-group");
 
+groups.forEach ( group => {
+  displayBar(group);
+});
 
-
-
-mobileMenuTags.forEach( tag => {
-  tag.onclick = () => {
-    if(window.innerWidth < 410) {
-      menuOnOff();
-    }
+function displayBar(group) {
+  var bar = group.querySelector(".bar");
+  group.onmouseover = () => {
+    bar.style.visibility = "visible";
+    bar.style.animation = "show 4s ease forwards";
   }
-})
-
-
-menuOnOffButton.onclick = () => {
-  menuOnOff();
 }
+
+
 
 function menuOnOff() {
   if(counter % 2 === 0) {
@@ -91,21 +87,7 @@ window.onload = () => {
   //changeActiveFields();
 }
 
-window.onscroll = () => {
-  if(circles[0].getBoundingClientRect().top < 450) {
-    countNumber(firstNum, 84);
-    countNumber(secondNum, 89);
-    countNumber(thirdNum, 91);
-  }
-  menuSections.forEach( (section, index) => {
-    if ((section.getBoundingClientRect().top < 0 ) && (section.getBoundingClientRect().bottom > 0)) {
-      var current = document.querySelectorAll(".active");
-      changeActiveFieldsOnBoth(current);
-      menu[0].children[index].classList.add("active");
-      menu[1].children[index].classList.add("active");
-    }
-  })
-}
+
 
 function changeActiveFieldsOnBoth(a) {
   a.forEach( b => {

@@ -53,6 +53,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
+  background-color: #4a66ac;
   top: 0;
   left: 0;
   bottom: 0;
@@ -60,8 +61,29 @@ body {
   position: absolute;
   z-index: -1;
 }
+
+.hero .heading-area .row .learn-more {
+  padding: 5px 50px;
+  height: fit-content;
+  color: #555;
+  font-size: 15px;
+  background-color: #fff;
+  border-radius: 100px;
+  cursor: pointer;
+  right: 37.5%;
+  border-color: #fff;
+}
+
+.hero .heading-area .row .learn-more:hover {
+  color:#fff;
+  background-color: #001851;
+  border: 1px solid #001851;
+}
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#values {
+  background-color: #c0c9d1;
+}
 .values {
   background-color: #2a2d2e;
   color: #fff;
@@ -130,7 +152,7 @@ svg {
 }
 
 .text-copy:nth-child(3){
-	stroke: #bde0ef;
+	stroke:  #2a2d2e;
 	animation-delay: -3s;
 }
 
@@ -252,8 +274,12 @@ svg {
 
 .heading-area {
   position: absolute;
-  top: 25%;
-  left: 45%;
+  top: 18%;
+  left: 18%;
+}
+
+.hero-heading {
+  text-align: center;
 }
 
 .learn-more {
@@ -315,14 +341,14 @@ svg {
 }
 
 .item-title {
-  color: #1e4b5e;
+  color: #001851;
   text-transform: uppercase;
 }
 
 .item-service__icon {
   font-size: 300%;
   transform: translate(-15%, 0);
-  color: #1e4b5e;
+  color:  #001851;
 }
 
 .app_round_image {
@@ -346,7 +372,7 @@ svg {
 
 .describing-text {
   position: relative;
-  left: 10vw;
+  left: -10vw;
 }
 
 .logo {
@@ -370,11 +396,31 @@ svg {
   position: absolute;
   bottom: -0.5rem;
   left: 40%;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
   font-size: 12px;
 
 }
+.special-icon .fas {
+  font-size: 400%;
+}
+
+.special-text h5{
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.special-text h6{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.2rem;
+  text-transform: full-width;
+}
+
+
 
 @keyframes  rotatingClockwise{
   from {transform: rotate(0deg);}
@@ -405,6 +451,7 @@ svg {
 .bank-details-item-name {
   text-align: right;
   margin: auto 0;
+  color: #2869ff;
 }
 
 input[type="text"] {
@@ -421,18 +468,19 @@ input[type="text"] {
 
 input[type="text"]:hover {
   cursor: copy;
-  border: 0.5px solid #1EAEDB;
-  color: #1EAEDB;
+  border: 0.5px solid #2869ff;
+  color: #2869ff;
 }
 
 .bank-details i {
   font-weight: 100;
   margin: auto auto;
   margin-top: 10%;
-  border: 0.5px solid #1EAEDB;
+  border: 0.5px solid #2869ff;
   border-radius: 50%;
   padding: 0.8rem;
   cursor: pointer;
+  color: #2869ff;
   transition: 1s all ease;
 }
 
@@ -444,7 +492,7 @@ input[type="text"]:hover {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 50px;
-  background-color: #1EAEDB;
+  background-color: #2869ff;
   color: #2a2d2e;
   font-size: 1rem;
   font-weight: bold;
@@ -478,6 +526,54 @@ input[type="text"]:hover {
   margin-left: 2.5rem;
 }
 
+#join-us {
+  background-color: #00267f;
+}
+
+#join-us .join-group {
+  background-color: rgba(255, 255, 255, 0.90);
+  color: #001851;
+  margin-bottom: 3rem;
+  margin-left: 2%;
+  padding: 4rem 0;
+  border-radius: 20px;
+  transition: 1s ease all;
+}
+
+#join-us .join-group:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0.5px 0.5px 30px rgba(255, 255, 255, 0.7);
+  transform: scale(1.03);
+  transition: 1s ease all;
+  cursor: pointer;
+}
+#join-us .join-group:hover .progress-bar-area span {
+  font-weight: 900;
+}
+
+#join-us .join-group:hover .join-group-text-area h4 {
+  font-weight: 900;
+}
+
+#join-us .last {
+  transform: translate(55%, 0);
+  margin-left: 0;
+}
+
+#join-us .last:hover {
+  transform: scale(1.03) translate(52%, 0);
+  transition: 1s ease all;
+}
+
+#join-us .fas {
+  font-size: 400%;
+  text-align: center;
+  padding: 1rem;
+}
+
+#join-us .last .fas{
+  transform: rotate(-90deg);
+}
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
@@ -507,6 +603,7 @@ input[type="text"]:hover {
   .hero-heading {
     font-size: 2.4rem;
     font-weight: 200;
+    text-align: center;
     color: #fff;
   }
   .appear-area {
@@ -521,6 +618,45 @@ input[type="text"]:hover {
     margin: 1rem auto;
   }
 }
+
+.values .values .row .value .item-process__text .item-title {
+  color: #2869ff;
+}
+
+.progress-bar {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 1rem;
+  color:transparent;
+  border-radius: 100px;
+}
+
+.bar {
+  content: "";
+  background-color: #001851;
+  position: relative;
+  left: 25%;
+  width: 50%;
+  height: 0.8rem;
+  margin-top: -0.9rem;
+  color: transparent;
+  border-radius: 100px;
+  visibility: hidden;
+}
+
+@keyframes show {
+  0% {width: 0; background-color: #001851;}
+  20% {background-color: #001851;}
+  40% {background-color: lightGreen;}
+  80% {background-color: lightGreen;}
+  80% {background-color: lightGreen;}
+  100%{width: 45%; background-color: #2869ff;}
+}
+
+
 
 @media (min-width: 575px) {
   .logo {
@@ -591,8 +727,8 @@ input[type="text"]:hover {
 
   .bank-details i:hover {
     color: #2a2d2e;
-    background-color: #1EAEDB;
-    box-shadow: 0.5px 0.5px 10px #1EAEDB;
+    background-color: #2869ff;
+    box-shadow: 0.5px 0.5px 10px #2869ff;
     transform: scale(1.1);
     transition: 1s all ease;
   }
