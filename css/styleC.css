@@ -76,8 +76,8 @@ body {
 
 .hero .heading-area .row .learn-more:hover {
   color:#fff;
-  background-color: #001851;
-  border: 1px solid #001851;
+  background-color: #151616;
+  border: 1px solid #151616;
 }
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -190,7 +190,6 @@ svg {
 
 .main-menu-area .container .nav-area .nav {
   position: fixed;
-  left: 40vw;
   top: 2rem;
   list-style-type: none;
   -webkit-padding-start: 80px;
@@ -288,7 +287,7 @@ svg {
 }
 
 #slideshow {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.85);
   overflow: hidden;
   height: 330px;
   width: 63rem;
@@ -341,14 +340,14 @@ svg {
 }
 
 .item-title {
-  color: #001851;
+  color: #151616;
   text-transform: uppercase;
 }
 
 .item-service__icon {
   font-size: 300%;
   transform: translate(-15%, 0);
-  color:  #001851;
+  color:  #151616;
 }
 
 .app_round_image {
@@ -373,6 +372,7 @@ svg {
 .describing-text {
   position: relative;
   left: -10vw;
+  margin-top: 5rem;
 }
 
 .logo {
@@ -418,6 +418,7 @@ svg {
   margin-right: auto;
   letter-spacing: 0.2rem;
   text-transform: full-width;
+  text-align: justify;
 }
 
 
@@ -451,7 +452,7 @@ svg {
 .bank-details-item-name {
   text-align: right;
   margin: auto 0;
-  color: #2869ff;
+  color: #c0c9d0;
 }
 
 input[type="text"] {
@@ -468,19 +469,19 @@ input[type="text"] {
 
 input[type="text"]:hover {
   cursor: copy;
-  border: 0.5px solid #2869ff;
-  color: #2869ff;
+  border: 0.5px solid #c0c9d0;
+  color: #c0c9d0;
 }
 
 .bank-details i {
   font-weight: 100;
   margin: auto auto;
   margin-top: 10%;
-  border: 0.5px solid #2869ff;
+  border: 0.5px solid #c0c9d0;
   border-radius: 50%;
   padding: 0.8rem;
   cursor: pointer;
-  color: #2869ff;
+  color: #c0c9d0;
   transition: 1s all ease;
 }
 
@@ -492,7 +493,7 @@ input[type="text"]:hover {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 50px;
-  background-color: #2869ff;
+  background-color: #c0c9d0;
   color: #2a2d2e;
   font-size: 1rem;
   font-weight: bold;
@@ -527,12 +528,31 @@ input[type="text"]:hover {
 }
 
 #join-us {
+  display: block;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#join-us::after {
+  content: "";
+  transform: translate(50%, 50%;);
+  background-image: url("../images/business.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
   background-color: #00267f;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 #join-us .join-group {
   background-color: rgba(255, 255, 255, 0.90);
-  color: #001851;
+  color: #151616;
   margin-bottom: 3rem;
   margin-left: 2%;
   padding: 4rem 0;
@@ -620,7 +640,7 @@ input[type="text"]:hover {
 }
 
 .values .values .row .value .item-process__text .item-title {
-  color: #2869ff;
+  color: #c0c9d0;
 }
 
 .progress-bar {
@@ -636,7 +656,7 @@ input[type="text"]:hover {
 
 .bar {
   content: "";
-  background-color: #001851;
+  background-color: #151616;
   position: relative;
   left: 25%;
   width: 50%;
@@ -647,13 +667,18 @@ input[type="text"]:hover {
   visibility: hidden;
 }
 
+.field {
+  border-left: 1px solid black;
+  padding: 2rem;
+}
+
 @keyframes show {
-  0% {width: 0; background-color: #001851;}
-  20% {background-color: #001851;}
+  0% {width: 0; background-color: #151616;}
+  20% {background-color: #151616;}
   40% {background-color: lightGreen;}
   80% {background-color: lightGreen;}
   80% {background-color: lightGreen;}
-  100%{width: 45%; background-color: #2869ff;}
+  100%{width: 45%; background-color: #c0c9d0;}
 }
 
 
@@ -727,8 +752,8 @@ input[type="text"]:hover {
 
   .bank-details i:hover {
     color: #2a2d2e;
-    background-color: #2869ff;
-    box-shadow: 0.5px 0.5px 10px #2869ff;
+    background-color: #c0c9d0;
+    box-shadow: 0.5px 0.5px 10px #c0c9d0;
     transform: scale(1.1);
     transition: 1s all ease;
   }
@@ -855,7 +880,7 @@ input[type="text"]:hover {
   }
 
   .main-menu-area .container .nav-area .nav {
-    left: 45vw;
+
   }
 
 }
@@ -1192,7 +1217,7 @@ input[type="text"]:hover {
 @media (max-width: 700px) {
 
   #slideshow {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     overflow: hidden;
     height: 330px;
     width: 31rem;
@@ -1264,7 +1289,7 @@ input[type="text"]:hover {
 @media (max-width: 550px) {
 
   #slideshow {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     overflow: hidden;
     height: 330px;
     width: 20rem;
