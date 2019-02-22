@@ -50,6 +50,7 @@ body {
   content: "";
   transform: translate(50%, 50%;);
   background-image: url(../images/team.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
@@ -82,7 +83,8 @@ body {
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #values {
-  background-color: #c0c9d1;
+  background-color: white;
+  color: #666666;
 }
 .values {
   background-color: #2a2d2e;
@@ -106,6 +108,12 @@ body {
   letter-spacing: 0.3rem;
 }
 
+.half {
+  width: 70%;
+  margin: auto;
+
+}
+
 /* Help
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .get-help {
@@ -117,6 +125,7 @@ body {
 .categories {
   background-image: url('../images/values-bg.jpg');
   background-size: cover;
+  background-attachment: fixed;
   color: #fff;
 }
 .categories .section-description {
@@ -180,7 +189,7 @@ svg {
 }
 
 
-.main-menu-area .container .nav-area {
+.main-menu-area .nav-area {
   width: 90%;
   height: 100%;
   margin-left: auto;
@@ -188,22 +197,23 @@ svg {
 
 }
 
-.main-menu-area .container .nav-area .nav {
+.main-menu-area .nav-area .nav {
   position: fixed;
+  right: 5rem;
   top: 2rem;
   list-style-type: none;
   -webkit-padding-start: 80px;
 }
 
 
-.main-menu-area .container .nav-area .nav li {
+.main-menu-area .nav-area .nav li {
   float: left;
   margin: 5px 10px;
   border: 1px solid darkGray;
   border-radius: 100px;
 }
 
-.main-menu-area .container .nav-area .nav li a {
+.main-menu-area .nav-area .nav li a {
   display: block;
   width: 90px;
   text-decoration: none;
@@ -216,7 +226,7 @@ svg {
   transition: 0.7s ease;
 }
 
-.main-menu-area .container .nav-area .nav li:hover {
+.main-menu-area .nav-area .nav li:hover {
   color: rgba(255, 255, 255, 1);
   transform: scale(1.15);
   transition: 0.7s ease;
@@ -225,7 +235,7 @@ svg {
   font-weight: bold;
 }
 
-.main-menu-area .container .nav-area .nav .active {
+.main-menu-area .nav-area .nav .active {
   border-radius: 100px;
   font-family: "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 1);
@@ -233,7 +243,7 @@ svg {
   font-weight: bold;
 }
 
-.main-menu-area .container .nav-area .nav .active:hover {
+.main-menu-area .nav-area .nav .active:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
@@ -335,18 +345,28 @@ svg {
   margin: 5rem 0;
 }
 
+.item-process {
+  padding: 2rem;
+  margin: 2rem 0 -2rem;
+}
+
 .item-service__text {
-  width: 25rem;
+  text-align: justify;
+  font-weight: 200;
+}
+
+.item-service__text p {
+  font-size: 1.8rem;
 }
 
 .item-title {
-  color: #151616;
+  font-weight: 100;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .item-service__icon {
   font-size: 300%;
-  transform: translate(-15%, 0);
   color:  #151616;
 }
 
@@ -371,7 +391,6 @@ svg {
 
 .describing-text {
   position: relative;
-  left: -10vw;
   margin-top: 5rem;
 }
 
@@ -419,6 +438,7 @@ svg {
   letter-spacing: 0.2rem;
   text-transform: full-width;
   text-align: justify;
+  text-justify: inter-word;
 }
 
 
@@ -430,9 +450,6 @@ svg {
 
 .copy {
   opacity: 1;
-}
-.bank-details {
-  transform: translate(-4.357%, 0);
 }
 
 .bank-details-item {
@@ -538,6 +555,7 @@ input[type="text"]:hover {
   transform: translate(50%, 50%;);
   background-image: url("../images/business.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 1;
@@ -551,22 +569,29 @@ input[type="text"]:hover {
 }
 
 #join-us .join-group {
-  background-color: rgba(255, 255, 255, 0.90);
-  color: #151616;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
   margin-bottom: 3rem;
   margin-left: 2%;
-  padding: 4rem 0;
+  padding: 2rem 0;
   border-radius: 20px;
   transition: 1s ease all;
 }
 
 #join-us .join-group:hover {
   background-color: rgba(255, 255, 255, 1);
+  color: #151616;
   box-shadow: 0.5px 0.5px 30px rgba(255, 255, 255, 0.7);
   transform: scale(1.03);
   transition: 1s ease all;
   cursor: pointer;
 }
+
+#join-us .join-group .progress-bar-area {
+  display: none;
+}
+
 #join-us .join-group:hover .progress-bar-area span {
   font-weight: 900;
 }
@@ -593,6 +618,18 @@ input[type="text"]:hover {
 
 #join-us .last .fas{
   transform: rotate(-90deg);
+}
+
+.bottom-cols {
+  text-align: left;
+}
+
+.bottom-cols .item-title {
+  text-align: left;
+}
+
+.bank-details-item-name {
+  text-align: left;
 }
 
 /* Bigger than 550 */
@@ -668,8 +705,35 @@ input[type="text"]:hover {
 }
 
 .field {
-  border-left: 1px solid black;
+  border-left: 1px solid white;
   padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+#fields {
+  display: block;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#fields::after {
+  content: "";
+  transform: translate(50%, 50%;);
+  background-image: url("../images/focus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 1;
+  background-color: #00267f;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 @keyframes show {
@@ -801,7 +865,7 @@ input[type="text"]:hover {
   }
 
   .main-menu-area .container .nav-area .nav {
-    left: 25vw;
+    left: 15vw;
   }
 
   .insider-title {
@@ -839,7 +903,7 @@ input[type="text"]:hover {
   }
 
   .main-menu-area .container .nav-area .nav {
-    left: 35vw;
+    left: 25vw;
   }
   .hero {
     height: 35rem;
@@ -999,7 +1063,7 @@ input[type="text"]:hover {
     font-size: 10vw;
     margin-top: 4rem;
   }
-  .main-menu-area .container {
+  .main-menu-area {
     visibility: hidden;
   }
 
