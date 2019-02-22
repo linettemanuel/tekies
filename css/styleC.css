@@ -126,6 +126,7 @@ body {
 .hero .heading-area .row .learn-more {
   padding: 5px 50px;
   height: fit-content;
+  height: -moz-fit-content;
   color: #555;
   font-size: 15px;
   background-color: #fff;
@@ -139,6 +140,13 @@ body {
   color:#fff;
   background-color: #151616;
   border: 1px solid #151616;
+}
+
+.key-value .special-text p {
+  text-align: justify;
+  padding: 0 2rem;
+  font-weight: 200;
+  font-size: 19px;
 }
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -399,14 +407,13 @@ svg {
   font-weight: 900;
   font-size: 27rem;
   font-family: "Montserrat";
-  color: rgba(255,255,255, 0.3);
-  text-align: center;
+  color: #95A5A6;
+  text-align: right;
   margin: 5rem 0;
 }
 
 .item-process {
   padding: 2rem;
-  margin: 2rem 0 -2rem;
 }
 
 .item-service__text {
@@ -424,9 +431,9 @@ svg {
   text-transform: uppercase;
 }
 
-.item-service__icon {
-  font-size: 300%;
-  color:  #151616;
+.item-service__icon svg:hover {
+  transform: rotate(360deg);
+  transition: 1s ease all;
 }
 
 .app_round_image {
@@ -515,14 +522,6 @@ svg {
   display: grid;
   grid-template-columns: 35% 50% 15%;
   justify-content: space-around;
-  margin-bottom: -1.5rem;
-}
-
-.bank-details-item {
-  display: grid;
-  grid-template-columns: 35% 50% 15%;
-  justify-content: space-around;
-  margin-bottom: -1.5rem;
 }
 
 .bank-details-item-name {
@@ -626,6 +625,8 @@ input[type="text"]:hover {
   position: absolute;
   z-index: -1;
 }
+
+
 
 #join-us .join-group {
   background-color: transparent;
@@ -764,11 +765,15 @@ input[type="text"]:hover {
 }
 
 .field {
-  border-left: 1px solid white;
+  border: 1px solid aquamarine;
+  border-radius: 10px;
   padding: 2rem;
   font-size: 2.5rem;
   font-weight: 200;
+  list-style: none;
 }
+
+
 
 #fields {
   display: block;
