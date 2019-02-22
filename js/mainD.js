@@ -84,7 +84,9 @@ function changeColorOfIcon(x) {
 }
 
 window.onload = () => {
-  //changeActiveFields();
+  var preloader = document.querySelector(".preloader");
+  preloader.style.animation = "fadeOut 1s ease forwards";
+  preloader.style.zIndex = -20;
 }
 
 
