@@ -30,6 +30,88 @@ body {
   z-index: 1000000;
 }
 
+.form-area {
+  width: 50%;
+  height: 90%;
+  background-color:#2a2d2e;
+  position: fixed;
+  top: 5%;
+  left: 25%;
+  z-index: 1000000;
+  border-radius: 50px;
+}
+.close svg {
+  margin-left: 90%;
+  margin-top: 5%;
+}
+
+.close svg {
+  margin-left: 90%;
+  margin-top: 5%;
+}
+.close svg:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.page-behind {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100000000;
+  display: none;
+}
+.form-area form {
+  width: 80%;
+  height: 85%;
+  margin: 1.5rem auto;
+}
+
+.form-area form input, textarea {
+  width: 80%;
+  margin: 0.5rem 10%;
+  text-align: center;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  outline: none;
+}
+
+.form-area form textarea {
+  height: 40%;
+  margin: 3rem 10%;
+  color: white;
+  text-align: left;
+  border: 1px solid white;
+  background-color: transparent;
+  outline: none;
+}
+
+.form-area button {
+  margin-left: 73%;
+}
+
+.form-area form input:hover {
+  outline: none;
+  border: none;
+  border-bottom: 3px solid aquamarine;
+}
+
+.form-area form input:active {
+  outline: none;
+  border: none;
+  border-bottom: 3px solid aquamarine;
+}
+
+.form-area form input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 3px solid aquamarine;
+}
+
+
 
 .loader-frame {
   width: 80px;
@@ -151,8 +233,8 @@ body {
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #values {
-  background-color: white;
-  color: #666666;
+  background-color: #2a2d2e;
+  color: white;
 }
 .values {
   background-color: #2a2d2e;
@@ -200,7 +282,7 @@ body {
 }
 
 body{
-  background: lightGray;
+  background: #2a2d2e;
 }
 
 svg {
@@ -407,28 +489,72 @@ svg {
   font-weight: 900;
   font-size: 27rem;
   font-family: "Montserrat";
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.1);
   text-align: right;
   margin: 5rem 0;
 }
 
+.carousel-area .container .row .one-third {
+  width: 33.3%;
+  margin: none;
+}
+
+.carousel-area .container .row .one-half {
+  width: 50%;
+}
+
+.carousel-area .container .row .column {
+  margin-left: 0;
+}
+
 .item-process {
-  padding: 2rem;
+  height: 300px;
+}
+
+.item-service__image {
+  position: relative;
+  height: inherit;
+  overflow-y: hidden;
+}
+
+.item-service__image img {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
 }
 
 .item-service__text {
   text-align: justify;
   font-weight: 200;
+  position: absolute;
+  transform: translate(0%, -100%);
+  width: 29%;
+  padding: 3rem;
 }
 
 .item-service__text p {
   font-size: 1.8rem;
+  visibility: hidden;
+}
+
+.item-process:hover .item-service__text p {
+  visibility: visible;
+  transition: 2s ease all;
+}
+
+.item-process:hover .item-service__image img {
+  opacity: 0.1;
 }
 
 .item-title {
-  font-weight: 100;
+  font-weight: 900;
   text-align: center;
+  color: white;
   text-transform: uppercase;
+}
+
+.bottom-cols .item-process__text .item-title {
+  font-weight: 100;
 }
 
 .item-service__icon svg:hover {
@@ -530,6 +656,10 @@ svg {
   color: #c0c9d0;
 }
 
+.bank-details-item-value {
+
+}
+
 input[type="text"] {
   background-color: transparent;
   color: white;
@@ -625,7 +755,6 @@ input[type="text"]:hover {
   position: absolute;
   z-index: -1;
 }
-
 
 
 #join-us .join-group {
@@ -765,15 +894,13 @@ input[type="text"]:hover {
 }
 
 .field {
-  border: 1px solid gray;
+  border: 1px solid #2a2d2e;
   border-radius: 10px;
   padding: 2rem;
   font-size: 2.5rem;
   font-weight: 200;
   list-style: none;
 }
-
-
 
 #fields {
   display: block;

@@ -124,3 +124,22 @@ function activatingField(a) {
     e.target.classList.add("active");
   });
 }
+
+
+var formPage = document.querySelector(".page-behind");
+var closingButton = document.querySelector(".close-button");
+closingButton.onclick = () => {
+  formPage.style.display = "none";
+}
+
+var joinGroups = document.querySelectorAll(".join-group");
+joinGroups.forEach( joinGroup => {
+  joinGroup.onclick = () => {
+    formPage.style.display = "block";
+  }
+})
+
+var submitButton = document.querySelector(".submit");
+submitButton.onclick = () => {
+  
+}
