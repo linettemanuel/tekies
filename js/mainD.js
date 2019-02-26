@@ -141,5 +141,20 @@ joinGroups.forEach( joinGroup => {
 
 var submitButton = document.querySelector(".submit");
 submitButton.onclick = () => {
-  
+}
+
+var menuIcon = document.querySelector(".burger-menu");
+var menuArea = document.querySelector(".main-menu-area");
+
+let menuCounter = 0;
+menuIcon.onclick = () => {
+  if (menuCounter % 2 == 0) {
+    menuArea.style.display = "block";
+    menuIcon.innerHTML = '<svg class="close-button" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 224 224"style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M43.93229,30.73438l-13.19792,13.19792l68.06771,68.06771l-68.06771,68.06771l13.19792,13.19791l68.06771,-68.06771l68.06771,68.06771l13.19791,-13.19791l-68.06771,-68.06771l68.06771,-68.06771l-13.19791,-13.19792l-68.06771,68.06771z"></path></g></g></svg>';
+    menuCounter++
+  } else {
+    menuArea.style.display = "none";
+    menuIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g id="Layer_1" fill="#ffffff"><path d="M199.5,38.5v7h-175v-7zM24.5,115.5h175v-7h-175zM73.5,80.5h126v-7h-126zM73.5,150.5h126v-7h-126zM24.5,185.5h175v-7h-175z"></path><path d="M199.5,56v7h-14v-7zM199.5,91v7h-14v-7zM199.5,126v7h-14v-7zM199.5,161v7h-14v-7z"></path></g></g></svg>';
+    menuCounter++
+  }
 }

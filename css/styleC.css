@@ -31,15 +31,15 @@ body {
 }
 
 .form-area {
-  width: 50%;
+  width: 100%;
   height: 90%;
   background-color:#2a2d2e;
   position: fixed;
   top: 5%;
-  left: 25%;
   z-index: 1000000;
   border-radius: 50px;
 }
+
 .close svg {
   margin-left: 90%;
   margin-top: 5%;
@@ -339,36 +339,57 @@ svg {
 
 
 .main-menu-area {
-  display: block;
+  display: none;
   position: fixed;
-  width: 97.5vw;
-  height: 84px;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
   z-index: 100;
 }
 
+.burger-menu {
+  display: block;
+  opacity: 0.7;
+  position: fixed;
+  right: 2vw;
+  top: 5vh;
+  z-index: 2000000000;
+}
+
+.burger-menu:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: 1s ease transform;
+  cursor: pointer;
+}
+
+.burger-menu svg {
+  width: 70%;
+}
 
 .main-menu-area .nav-area {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-
+  background: rgba(0, 0, 0, 0.98);
 }
 
 .main-menu-area .nav-area .nav {
-  position: fixed;
-  right: 5rem;
-  top: 2rem;
+  width: 50%;
+  margin: 0% 15%;
+  padding-top: 15%;
+  height: 60%;
   list-style-type: none;
   -webkit-padding-start: 80px;
+  background:transparent;
 }
 
 
 .main-menu-area .nav-area .nav li {
-  float: left;
-  margin: 5px 10px;
-  border: 1px solid darkGray;
-  border-radius: 100px;
+  text-align: -webkit-center;
+  text-align: center;
+  display: block;
+  height: 20%;
+  margin: auto auto;
 }
 
 .main-menu-area .nav-area .nav li a {
@@ -377,46 +398,27 @@ svg {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.7rem;
+  color: white;
   padding: 5px 10px;
   text-align: center;
-  transition: 0.7s ease;
+  transition: 0.7s transform ease;
 }
 
 .main-menu-area .nav-area .nav li:hover {
-  color: rgba(255, 255, 255, 1);
   transform: scale(1.15);
-  transition: 0.7s ease;
-  box-shadow: 0.5px 0.5px 10px rgba(255, 255, 255, 0.7);
+  transition: 0.7s transform ease;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .main-menu-area .nav-area .nav .active {
-  border-radius: 100px;
-  font-family: "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 1);
-  box-shadow: 0.5px 0.5px 10px rgba(255, 255, 255, 0.7);
-  font-weight: bold;
-}
-
-.main-menu-area .nav-area .nav .active:hover {
+  transform: scale(1.15);
+  transition: 0.7s transform ease;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0.5px 0.5px 10px rgba(255, 255, 255, 0.7);
-  transform: none;
+  font-weight: 900;
 }
-
-.main-menu-area {
-  display: block;
-  position: fixed;
-  width: 97.5vw;
-  height: 84px;
-  z-index: 100;
-}
-
 
 .appear-heading {
   font-weight: 900;
@@ -997,6 +999,11 @@ input[type="text"]:hover {
     right: 37.5%;
   }
 
+  .form-area {
+    width: 70%;
+    left: 15%;
+  }
+
 }
 
 @media (min-width: 720px) {
@@ -1073,6 +1080,10 @@ input[type="text"]:hover {
   }
   #join-us::after {
     background-attachment: fixed;
+  }
+  .form-area {
+    width: 50%;
+    left: 25%;
   }
 }
 
@@ -1198,10 +1209,6 @@ input[type="text"]:hover {
     left: -50%;
   }
 
-  .main-menu-area .container .nav-area .nav {
-
-  }
-
 }
 
 @media (min-width: 1500px) {
@@ -1318,11 +1325,6 @@ input[type="text"]:hover {
     font-size: 10vw;
     margin-top: 4rem;
   }
-  .main-menu-area {
-    visibility: hidden;
-  }
-
-
   .values .one-line .row .one-third{
     width: 90%;
     margin-left: auto;
@@ -1341,8 +1343,6 @@ input[type="text"]:hover {
     margin-right: auto;
     transform: translate(0%, 0);
   }
-
-
   .insider-title {
     display: block;
     position: relative;
@@ -1739,10 +1739,6 @@ input[type="text"]:hover {
 
   .footer {
     left: 20%;
-  }
-
-  .main-menu-area {
-    display: none;
   }
 
 }
