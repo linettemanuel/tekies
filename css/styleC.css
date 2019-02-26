@@ -189,6 +189,10 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+#about {
+  padding: padding:0rem 0rem 2rem;
+}
+
 .hero::after {
   content: "";
   transform: translate(50%, 50%;);
@@ -214,7 +218,7 @@ body {
   background-color: #fff;
   border-radius: 100px;
   cursor: pointer;
-  right: 37.5%;
+  right: 14%;
   border-color: #fff;
 }
 
@@ -241,6 +245,17 @@ body {
   color: #fff;
   padding-bottom: 5rem;
 }
+
+#contact {
+  padding: 8rem 2rem;
+  margin: 3rem 0 0 0;
+}
+
+.contact .values {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .value-multiplier {
   margin-bottom: .5rem;
   color: #bde0ef;
@@ -256,12 +271,6 @@ body {
   transform: translate(8%, 0);
   margin-top: 2rem;
   letter-spacing: 0.3rem;
-}
-
-.half {
-  width: 70%;
-  margin: auto;
-
 }
 
 /* Help
@@ -430,12 +439,6 @@ svg {
   transition: 2s ease all;
 }
 
-.heading-area {
-  position: absolute;
-  top: 18%;
-  left: 18%;
-}
-
 .hero-heading {
   text-align: center;
 }
@@ -493,14 +496,17 @@ svg {
   text-align: right;
   margin: 5rem 0;
 }
+.key-id .title {
+  display: none;
+}
 
 .carousel-area .container .row .one-third {
-  width: 33.3%;
+  width: 100%;
   margin: none;
 }
 
 .carousel-area .container .row .one-half {
-  width: 50%;
+  width: 100%;
 }
 
 .carousel-area .container .row .column {
@@ -508,7 +514,7 @@ svg {
 }
 
 .item-process {
-  height: 300px;
+  height: 270px;
 }
 
 .item-service__image {
@@ -527,8 +533,8 @@ svg {
   text-align: justify;
   font-weight: 200;
   position: absolute;
+  width: auto;
   transform: translate(0%, -100%);
-  width: 29%;
   padding: 3rem;
 }
 
@@ -657,7 +663,8 @@ svg {
 }
 
 .bank-details-item-value {
-
+  font-weight: lighter;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 input[type="text"] {
@@ -789,16 +796,6 @@ input[type="text"]:hover {
   font-weight: 900;
 }
 
-#join-us .last {
-  transform: translate(55%, 0);
-  margin-left: 0;
-}
-
-#join-us .last:hover {
-  transform: scale(1.03) translate(52%, 0);
-  transition: 1s ease all;
-}
-
 #join-us .fas {
   font-size: 400%;
   text-align: center;
@@ -810,19 +807,26 @@ input[type="text"]:hover {
 }
 
 .bottom-cols {
-  text-align: left;
+  text-align: center;
 }
 
 .bottom-cols .item-title {
-  text-align: left;
+  text-align: center;
 }
 
 .bank-details-item-name {
-  text-align: left;
+  text-align: center;
 }
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
+  .key-id .title {
+    display: block;
+  }
+  #about {
+    padding: padding:0rem 8rem 2rem;
+  }
+
   .section {
     padding: 12rem 0 11rem;
   }
@@ -862,6 +866,18 @@ input[type="text"]:hover {
 
   .bottom-cols {
     margin: 1rem auto;
+  }
+  #join-us .last {
+    transform: translate(55%, 0);
+    margin-left: 0;
+  }
+
+  #join-us .last:hover {
+    transform: scale(1.03) translate(52%, 0);
+    transition: 1s ease all;
+  }
+  .contact .values {
+    padding-bottom: 0rem;
   }
 }
 
@@ -941,6 +957,9 @@ input[type="text"]:hover {
   .logo {
     left: -135%;
   }
+  .item-process {
+    height: 300px;
+  }
 
 }
 
@@ -957,6 +976,25 @@ input[type="text"]:hover {
 
   .bottom-cols {
     margin: 3rem auto;
+  }
+  .bottom-cols {
+    text-align: left;
+  }
+
+  .bottom-cols .item-title {
+    text-align: left;
+  }
+
+  .bank-details-item-name {
+    text-align: left;
+  }
+  .heading-area {
+    position: absolute;
+    top: 18%;
+    left: 18%;
+  }
+  .hero .heading-area .row .learn-more {
+    right: 37.5%;
   }
 
 }
@@ -1092,6 +1130,21 @@ input[type="text"]:hover {
 
   .burger-icon {
     display: none;
+  }
+  #contact {
+    padding: 0 2rem;
+  }
+  .carousel-area .container .row .one-third {
+    width: 33.3%;
+    margin: none;
+  }
+
+  .carousel-area .container .row .one-half {
+    width: 50%;
+    margin: none;
+  }
+  .item-service__text {
+    width: 29%;
   }
 }
 
